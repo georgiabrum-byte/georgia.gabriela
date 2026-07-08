@@ -2,79 +2,273 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Graft Ten - Moda e Tecnologia</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graft Ten - O Futuro nos Pés</title>
+    <style>
+        /* Estilos Globais - Inspiração Cyberpunk / Tech */
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --text-color: #c5c6c7;
+            --neon-cyan: #66fcf1;
+            --neon-green: #45f3ff;
+            --neon-pink: #ff007f;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f2833, #0b0c10);
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 3px solid var(--neon-cyan);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--neon-cyan);
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #121212;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--neon-cyan);
+            text-shadow: 0 0 5px var(--neon-cyan);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            border-left: 5px solid var(--neon-cyan);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-top: 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        /* Área de Interação - Customizador de Tênis */
+        .customizer-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            background: #121212;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px dashed var(--neon-pink);
+        }
+
+        .preview-box {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: var(--neon-cyan);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(102, 252, 241, 0.5);
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .preview-box svg {
+            width: 150px;
+            fill: #fff;
+            transition: fill 0.3s;
+        }
+
+        .controls {
+            max-width: 400px;
+        }
+
+        .color-btn {
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+
+        .btn-cyan { background-color: #66fcf1; color: #000; }
+        .btn-pink { background-color: #ff007f; color: #fff; }
+        .btn-neon { background-color: #39ff14; color: #000; }
+
+        .color-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px currentColor;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 12px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "⚡";
+            position: absolute;
+            left: 0;
+            color: var(--neon-cyan);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #050505;
+            color: #888;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
 <body>
 
 <header>
     <h1>Graft Ten</h1>
-    <p>Sabor personalizado em cada mordida</p>
+    <p>Ciência, Engenharia e o Futuro nos Seus Pés</p>
 </header>
 
 <nav>
-    <a href="#">Início</a> |
-    <a href="#">Sobre</a> |
-    <a href="#">Contato</a>
+    <a href="#futuro">Tecnologia</a>
+    <a href="#bastidores">Bastidores</a>
+    <a href="#customizar">Customizar</a>
+    <a href="#galeria">Galeria</a>
 </nav>
 
 <main>
 
-    <h2>Bem-vindo ao Blog da Graft Ten</h2>
+    <section id="futuro">
+        <h2>O Futuro nos Pés: Como a Tecnologia Transforma o Design de Tênis</h2>
+        <p>
+            Sabe aquele papo de filme de ficção científica onde as pessoas usam roupas que se moldam ao corpo? 
+            Bem, ainda não estamos voando, mas o que a tecnologia está fazendo com os tênis hoje chega bem perto disso.
+        </p>
+        <p>
+            Longe de serem apenas pedaços de borracha e tecido, os sneakers da <strong>Graft Ten</strong> são verdadeiros computadores de vestir. 
+            Tecidos inteligentes que respiram junto com o seu pé e amortecimentos desenvolvidos por softwares que parecem ter saído direto de 2050.
+        </p>
+    </section>
 
-    <p>
-        A Graft Ten é uma empresa que une moda e tecnologia para criar tênis
-        personalizados. Nosso objetivo é oferecer produtos exclusivos para
-        adolescentes e jovens adultos que valorizam estilo, inovação e
-        autenticidade.
-    </p>
+    <section id="customizar">
+        <h2>Sneakers do Seu Jeito: Teste sua Customização</h2>
+        <p>Olhar para um tênis totalmente customizável dá um certo frio na barriga? Escolha uma paleta abaixo e veja a mágica acontecer no nosso laboratório virtual:</p>
+        
+        <div class="customizer-container">
+            <div class="preview-box" id="sneakerPreview">
+                <svg viewBox="0 0 24 24" id="sneakerIcon">
+                    <path d="M21,14.5C21,13.5 20.3,12.2 19.3,11.3L16.3,8.3C15.2,7.2 13.5,6.5 12,6.5H5C3.3,6.5 2,7.8 2,9.5V14.5C2,15.6 2.9,16.5 4,16.5H20C20.6,16.5 21,16.1 21,15.5V14.5M6,14.5A1.5,1.5 0 0,1 4.5,13A1.5,1.5 0 0,1 6,11.5A1.5,1.5 0 0,1 7.5,13A1.5,1.5 0 0,1 6,14.5M14,12H10V10H14V12Z" />
+                </svg>
+            </div>
+            
+            <div class="controls">
+                <button class="color-btn btn-cyan" onclick="changeColor('#66fcf1', '#000')">Cyber Cyan</button>
+                <button class="color-btn btn-pink" onclick="changeColor('#ff007f', '#fff')">Neon Pink</button>
+                <button class="color-btn btn-neon" onclick="changeColor('#39ff14', '#000')">Acid Green</button>
+            </div>
+        </div>
+    </section>
 
-    <img src="images/1000095368.png"
+    <section id="bastidores">
+        <h2>Bastidores da Criação: Como Nasce um Tênis Personalizado</h2>
+        <p>
+            Tudo começa em uma tela preta cheia de linhas no software de modelagem. Nossos designers testam combinações de cores ousadas e texturas que parecem impossíveis. 
+            Depois que o design sobrevive aos testes virtuais, ele vai para a nossa linha de produção inteligente, onde ganha vida com precisão cirúrgica.
+        </p>
+        
+        <h3>Dicas para Escolher a Customização Perfeita:</h3>
+        <ul>
+            <li><strong>Comece pela sua paleta:</strong> Escolha entre o minimalista ou cores que chamam atenção até do espaço.</li>
+            <li><strong>Pense no seu guarda-roupa:</strong> Escolha cores que combinem ou tragam contraste com o que você já usa.</li>
+            <li><strong>Brinque com os detalhes:</strong> O segredo está nas texturas que as pessoas só reparam de perto.</li>
+        </ul>
+    </section>
 
-    <h2>O Futuro nos Pés: Como a Tecnologia Transforma o Design de Tênis</h2>
-
-    <p>
-        A tecnologia está revolucionando a criação dos tênis modernos. Os
-        modelos da Graft Ten utilizam materiais inteligentes, conforto e design
-        inovador para oferecer uma experiência única ao usuário.
-    </p>
-
-    <p>
-        Muito mais do que aparência, nossos tênis unem engenharia, criatividade
-        e inovação para criar produtos modernos e personalizados.
-    </p>
-
-    <h2>Bastidores da Criação</h2>
-
-    <p>
-        Cada tênis personalizado passa por um processo de criação digital,
-        escolha de cores, testes virtuais e produção cuidadosa para garantir
-        qualidade e exclusividade.
-    </p>
-
-    <h2>Dicas para Escolher seu Tênis</h2>
-
-    <ul>
-        <li>Escolha uma paleta de cores que combine com seu estilo.</li>
-        <li>Personalize detalhes exclusivos.</li>
-        <li>Pense nas roupas que você usa no dia a dia.</li>
-        <li>Priorize conforto e qualidade.</li>
-    </ul>
-
-    <h2>Galeria da Galera</h2>
-
-    <p>
-        Nossa comunidade compartilha fotos usando os tênis Graft Ten. Cada
-        cliente cria um modelo único, mostrando sua personalidade através da
-        customização.
-    </p>
+    <section id="galeria">
+        <h2>Galeria da Galera: Histórias Reais</h2>
+        <p>
+            Nossa comunidade não usa apenas um tênis; ela dita tendência. Temos desde a galera que combina o Graft Ten com alfaiataria larga para um visual urbano chique, até quem não tira o sneaker do pé nem para ir à padaria.
+        </p>
+        <p><em>A verdadeira personalização começa quando você amarra os cadarços e sai para a rua.</em></p>
+    </section>
 
 </main>
 
 <footer>
-    <p>© 2026 Graft Ten - Moda, Tecnologia e Personalização.</p>
+    <p>&copy; 2026 - Desenvolvido por: Georgia Brum e Gabriella Oconoski - Turma 1TB</p>
 </footer>
+
+<script>
+    function changeColor(bgColor, iconColor) {
+        const previewBox = document.getElementById('sneakerPreview');
+        const sneakerIcon = document.getElementById('sneakerIcon');
+        
+        previewBox.style.backgroundColor = bgColor;
+        previewBox.style.boxShadow = `0 0 30px ${bgColor}`;
+        sneakerIcon.style.fill = iconColor;
+    }
+</script>
 
 </body>
 </html>
