@@ -183,7 +183,7 @@ footer {
 
 /* Imagens dos posts */
 .img-post {
-    width: 700px;      /* tamanho da imagem */
+    width: 800px;      /* tamanho da imagem */
     max-width: 100%;   /* adapta no celular */
     height: auto;      /* mantém a proporção */
     display: block;
