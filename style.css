@@ -180,3 +180,13 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.03);
     font-size: 0.9rem;
 }
+
+/* Imagens dos posts */
+.img-post {
+    width: 350px;      /* tamanho da imagem */
+    max-width: 100%;   /* adapta no celular */
+    height: auto;      /* mantém a proporção */
+    display: block;
+    margin: 20px auto; /* centraliza */
+    border-radius: 12px;
+}
